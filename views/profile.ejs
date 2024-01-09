@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive User Profile Card using HTML and CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="icon" >
+            <h2 class="logo">KINGSNET</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="http://localhost:3000/">HOME</a></li>
+                <li><a href="http://localhost:3000/about1">ABOUT</a></li>
+                <% if(!isAuthenticated){%>
+                    <li><a href="/login">LOGIN</a></li>
+                    <% } else{ %>
+                    <li><a href="/logout">LOGOUT</a></li>
+                    <% } %>
+
+                
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> <button class="btn">Search</button></a>
+        </div>
+        <div class="profilelogo">
+            <% if(isAuthenticated){%>
+                <a href="http://localhost:3000/profile">
+                    <img src="<%= user.picture %>" alt="" width="50px ">
+                </a> 
+            <% } %>
+                
+        </div>            
+
+    </div> 
+
+
+    <div class="wrapper">
+        <div class="user-card">
+            <div class="user-card-img">
+              <img src="<%= user.picture %>"
+               alt="user profile photo">
+            </div>
+            <div class="user-card-info">
+              <h2><%= user.nikename || user.name %></h2>
+              
+              <p><span>Email:</span> <%= user.email %></p>
+              <p><span>Created at :</span> <%= user.updated_at %></p>
+
+              
+            </div>
+        </div>
+    </div>
+      
+
+
+</body>
+</html>

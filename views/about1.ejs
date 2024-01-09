@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--must include fontawesome cdn in <head> tag-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+        <script   src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="/stylesheets/about1.css">
+        <script src="/javascripts/about1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        
+      </head>
+      <body>
+        <div class="navbar">
+            <div class="icon" >
+                <h2 class="logo">KINGSNET</h2>
+            </div>
+        
+            <div class="menu">
+                <ul>
+                    <li><a href="http://localhost:3000/">HOME</a></li>
+                    <li><a href="http://localhost:3000/about1">ABOUT</a></li>
+                    <% if(!isAuthenticated){%>
+                        <li><a href="/login">LOGIN</a></li>
+                        <% } else{ %>
+                        <li><a href="/logout">LOGOUT</a></li>
+                        <% } %>
+        
+                    
+                </ul>
+            </div>
+        
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+            <div class="profilelogo">
+                <% if(isAuthenticated){%>
+                    <a href="http://localhost:3000/profile">
+                        <img src="<%= user.picture %>" alt="" width="50px ">
+                    </a> 
+                <% } %>
+                    
+            </div>            
+        
+        </div>
+        <div class="sidebar-contact">
+          <div class="toggle"></div>
+          <h2>Contact Us</h2>
+          <div class="scroll">
+          <form>
+            <input type="text" name="" placeholder="Name">
+            <input type="email" name="" placeholder="Email">
+            <input type="rel" name="" placeholder="Phone Number">
+            <textarea placeholder="Message here.."></textarea>
+            <input type="submit" name="" value="send">
+          </form>
+          </div>
+        </div>
+        <div class="banner"></div>
+        <div class="content">
+            <div class="photo">
+                    <img src="/images/image.jpg" width="300px">
+            </div>
+            <br>
+            <hr><br>
+        <div class="contentt">
+            <div>
+                <h1>SHIVAM VERMA </h1>
+                <p>Inspiring Web Developer</p>
+            </div>
+            <br>
+            <hr>
+            <div class="links">
+                <ul>
+                  <li><a href="https://github.com/shivamverma789" class="link"><i class="fab fa-github"></i> Github</a></li>
+                  <li><a href="https://www.linkedin.com/in/shivam-verma-a626a2286/" class="link"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                  
+                  <li><a href="https://www.instagram.com/shivamverma7869/" class="link"><i class="fas fa-mobile-alt"></i> Instagram</a></li>
+                </ul>
+            
+        
+                
+              </div>
+            </div>
+            
+        </div>
+        </div>
+      </body>
+</html>

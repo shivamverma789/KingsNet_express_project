@@ -1,0 +1,238 @@
+body,html{
+    height: 100%;
+ }
+ body {
+    background: #5f7e83;   
+    font-family: 'Montserrat', sans-serif;
+ }
+    *{
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main{
+        width: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+      
+      .navbar{
+        width: 100%;
+        height: 75px;
+        margin: 0;
+        
+        background-attachment: fixed;
+        background-color: darkslategray;
+      }
+      
+      .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+      }
+      
+      .logo{
+        color: #ffbb00;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+        margin-top: 5px
+      }
+      
+      .menu{
+        width: 400px;
+        float: left;
+        height: 70px;
+      }
+      
+      ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      ul li{
+        list-style: none;
+        margin-left: 80px;
+        margin-top: 27px;
+        font-size: 14px;
+      }
+      
+      ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+      }
+      
+      ul li a:hover{
+        color: #ffbb00;
+      }
+      
+      .search{
+        width: 330px;
+        float: left;
+        margin-left: 600px;
+      }
+      
+      .srch{
+        font-family: 'Times New Roman';
+        width: 200px;
+        height: 40px;
+        background: transparent;
+        border: 1px solid #ffbb00;
+        margin-top: 13px;
+        color: #fff;
+        border-right: none;
+        font-size: 16px;
+        float: left;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+      
+      .btn{
+        width: 100px;
+        height: 40px;
+        background: #ffbb00;
+        border: 2px solid #ffbb00;
+        margin-top: 13px;
+        color: #fff;
+        font-size: 15px;
+        border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: 0.2s ease;
+        cursor: pointer;
+      }
+      .btn:hover{
+        color: #000;
+      }
+      
+      .btn:focus{
+        outline: none;
+      }
+      
+      .srch:focus{
+        outline: none;
+      }
+      .profilelogo{
+        padding-top: 10px;
+        
+      }
+      .profilelogo img{
+        border-radius: 50%;
+        border-style: solid ;
+        border-width: 2px;
+        border-color: #ffbb00;
+      }
+    
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+  }
+  .user-card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     border-radius: 10px;
+     padding: 40px;
+     width: 650px;
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+ }
+  
+ .user-card:before {
+    content: '';
+    position: absolute;
+    height: 300%;
+    width: 173px;
+    background: #262626;
+    top: -60px;
+    left: -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+  }
+  
+  .user-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    z-index: 3;
+  }
+  
+  .user-card-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+        border-radius: 50%;
+  }
+  
+  .user-card-info {
+    text-align: center;
+  }
+  
+  .user-card-info h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+  }
+  
+  .user-card-info p {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .user-card-info p span {
+     font-weight: 700;
+     margin-right: 10px;
+ }
+  @media only screen and (min-width: 768px) {
+    .user-card {
+      flex-direction: row;
+      align-items: flex-start;
+    }   
+    .user-card-img {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .user-card-info {
+      text-align: left;
+    }
+  }
+ 
+  @media (max-width: 767px){
+    .wrapper{
+       padding-top: 3%;
+    }
+    .user-card:before {
+       width: 300%;
+       height: 200px;
+       transform: rotate(0);
+    }
+    .user-card-info h2 {
+       margin-top: 25px;
+       font-size: 50px;
+    }
+    .user-card-info p span {
+       display: block;
+       margin-bottom: 15px;
+       font-size: 30px;
+    }
+  }
+  
+  
+ 
