@@ -20,8 +20,8 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="http://localhost:3000/">HOME</a></li>
-                    <li><a href="http://localhost:3000/about1">ABOUT</a></li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about1">ABOUT</a></li>
                     <% if(!isAuthenticated){%>
                         <li><a href="/login">LOGIN</a></li>
                         <% } else{ %>
@@ -38,7 +38,7 @@
             </div>
             <div class="profilelogo">
                 <% if(isAuthenticated){%>
-                    <a href="http://localhost:3000/profile">
+                    <a href="/profile">
                         <img src="<%= user.picture %>" alt="" width="50px ">
                     </a> 
                 <% } %>
